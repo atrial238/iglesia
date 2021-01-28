@@ -1,0 +1,109 @@
+.blog {
+
+	&__wrapper {
+		@include adaptiv-value('padding-top', 80, 20, 1);
+		@include adaptiv-value('padding-bottom', 90, 10, 1);
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 25, 5, 1);
+	}
+
+	&__descr {
+		color: #a3a3a3;
+		font-family: "Droid Serif";
+		font-size: 12px;
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 60, 10, 1);
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -15px;
+		@media (max-width: $md2+px) {
+		  flex-wrap: wrap;
+		}
+		
+	}
+}
+
+.content {
+
+	&__item {
+		flex: 0 1 calc(25% - 30px);
+		margin: 0 15px;
+		font-family: "Arial";
+		@include adaptiv-value('margin-bottom', 30, 10, 1);
+		@media (max-width: $md2+px) {
+			flex: 0 1 calc(50% - 30px);
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 1 calc(100% - 30px);
+		 
+		}
+	}
+}
+.item {
+	
+	&__img {
+		display: block;
+		position: relative;
+		padding-bottom: 120%;
+		@include adaptiv-value('margin-bottom', 30, 10, 1);
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiv-value('margin-bottom', 30, 10, 1);
+
+	}
+
+	&__data {
+		flex: 0 1 25%;
+		background-color: #ffefa7;
+		padding: 5px 0;
+	}
+
+	&__title-text {
+		color: #000000;
+		font-family: "Playfair Display";
+		@include adaptiv-font(20, 14, 1);
+		flex: 0 1 70%;
+		@media (max-width: $md2+px) {
+		
+		}
+	}
+
+	&__descr {
+		color: #b3b3b3;
+		font-size: 12px;
+		text-align: justify;
+	}
+}
+
+.data {
+
+	&__day {
+		color: #403932;
+		@include adaptiv-font(27, 16, 1);
+		margin-bottom: 5px;
+		text-align: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	&__muns, &__year {
+		color: #afa293;
+		font-size: 9px;
+	}
+
+	&__year {
+	}
+}

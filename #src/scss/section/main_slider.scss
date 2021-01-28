@@ -1,0 +1,76 @@
+.main-slider {
+position: relative;
+	&__wrapper {
+		display: flex;
+	}
+
+	&__slide {
+		flex: 0 0 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.slide {
+
+	&__wrapper {
+		position: relative;
+		font-family: "Playfair Display";
+		color: #ffffff;
+		font-weight: 400;
+		z-index: 2;
+		flex: 0 1 50%;
+		background-color:rgba(127, 66, 88, 0.7);
+		@include adaptiv-value('padding-left', 87, 20, 1);
+		@include adaptiv-value('padding-top', 80, 20, 1);
+		@include adaptiv-value('padding-bottom', 140, 40, 1);
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+		}
+	}
+	&__descr {
+		width: 420px;
+		@media (max-width: $md1+px) {
+			width: auto;
+		}
+	}
+
+	&__lebel {
+		font-size: 14px;
+		@include adaptiv-font(14, 12, 1);
+		@include adaptiv-value('margin-bottom', 25, 10, 1);
+	}
+
+	&__title {
+		@include adaptiv-font(54, 18, 1);
+		@include adaptiv-value('margin-bottom', 45, 15, 1);
+	}
+
+	&__btn {
+	}
+
+	&__img {
+		
+	}
+}
+
+
+
+
+.swiper-button-prev, .swiper-button-next {
+	@include adaptiv-value('width', 43, 20, 1);
+	@include adaptiv-value('height', 43, 20, 1);
+	opacity: 0.5;
+	background-color: #000;
+	color: #fff;
+	top: auto;
+	bottom: 0px;
+	left: 50%;
+	&:after{
+		@include adaptiv-font(20, 12, 1);
+		font-weight: 400;
+	}
+}
+.swiper-button-prev {
+	transform: translateX(-100%);
+}

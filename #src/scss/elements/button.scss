@@ -1,0 +1,21 @@
+
+._btn {
+	background-color: #FFEFA7;
+	border-radius: 2px;
+	color: #804258;
+	font-family: "Arial";
+	font-size: 12px;
+	display: inline-block;
+	@include adaptiv-value('padding-top', 18, 10, 1);
+	@include adaptiv-value('padding-left', 30, 15, 1);
+	@include adaptiv-value('padding-right', 30, 15, 1);
+	@include adaptiv-value('padding-bottom', 18, 10, 1);
+}
+.btn-no-hl{
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}

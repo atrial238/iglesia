@@ -1,0 +1,9 @@
+._title{
+	color: #804258;
+	font-family: "Playfair Display";
+	@include adaptiv-font(44, 18, 1);
+	@include adaptiv-value('margin-bottom', 23, 10, 1);
+	font-weight: 400;
+	text-align: center;
+}
+

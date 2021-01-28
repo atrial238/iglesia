@@ -1,0 +1,128 @@
+.donation {
+	position: relative;
+	&__wrapper {
+		position: relative;
+		@include adaptiv-value('padding-bottom', 100, 20, 1);
+		@include adaptiv-value('padding-top', 150, 30, 1);
+		color: #ffffff;
+		display: flex;
+		z-index: 2;
+		@media (max-width: $md3+px) {
+		  flex-wrap: wrap;
+		  
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		@media (max-width: $md3+px) {
+		  flex: 0 1 100%;
+		  &:last-child{
+			  margin-bottom: 30px;
+		  }
+		}
+		&_donation {
+			display: flex;
+			justify-content: center;
+			@media (max-width: $md3+px) {
+				order: 2;
+				justify-content: flex-start;
+			}
+		
+		}
+
+		&_donation-descr {
+			border-left: 1px solid rgba(255, 255, 255, 0.2);
+			@include adaptiv-value('padding-left', 60, 10, 1);
+			@media (max-width: $md3+px) {
+				order: 1;
+				border-left: 0px solid rgba(255, 255, 255, 0.2);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				padding-left: 0;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	&__column-wrapper{
+			flex: 0 1 33.333%;
+	}
+	&__title {
+		font-family: "Playfair Display";
+		@include adaptiv-font(30, 18, 1);
+		@include adaptiv-value('margin-bottom', 25, 10, 1);
+		@media (max-width: $md3+px) {
+		  display: none;
+		}
+	}
+
+	&__descr {
+		font-family: "Droid Serif";
+		font-size: 13px;
+		@include adaptiv-value('margin-bottom', 30, 12, 1);
+		@media (max-width: $md3+px) {
+			display: none;
+		 }
+		
+	}
+
+	&__btn {
+		background-color: #7F4258;
+		text-transform: uppercase;
+		color: #ffffff;
+		font-family: "Arial";
+		font-weight: 700;
+		font-size: 14px;
+		@media (max-width: $md4+px) {
+			@include adaptiv-value('padding-left', 30, 10, 1);
+			@include adaptiv-value('padding-right', 30, 10, 1); 
+		}
+	}
+
+	&__bg {
+		img{
+			z-index: 1;
+		}
+	}
+	.social {
+		width: 60%;
+		img{
+			&:hover{
+				filter: invert(79%) sepia(8%) saturate(2883%) hue-rotate(284deg) brightness(64%) contrast(90%);
+			}
+		}
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		@include adaptiv-value('width', 165, 50, 1);
+		@include adaptiv-value('height', 7, 3, 1);
+		top: 0px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #ffefa7;
+		z-index: 2;
+	}
+}
+
+.donation-descr {
+
+	&__title {
+		font-family: "Playfair Display";
+		@include adaptiv-font(48, 18, 1);
+		font-size: 48px;
+		text-transform: uppercase;
+		@include adaptiv-value('margin-bottom', 30, 12, 1);
+	}
+
+	&__text {
+		font-family: "Arial";
+		font-size: 12px;
+		@include adaptiv-value('margin-bottom', 25, 10, 1);
+	}
+
+	&__social {
+	}
+}
+
+
